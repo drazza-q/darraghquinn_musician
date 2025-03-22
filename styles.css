@@ -1,0 +1,224 @@
+:not(:defined) > * {
+  display: none;
+}
+
+html {
+  height: 100%;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  align-content: left;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #dcf690;
+}
+
+model-viewer {
+  width: 80%;
+  height: 70%;
+  background-color: #dcf690;
+  align-content: center;
+}
+
+
+.progress-bar {
+  display: block;
+  width: 33%;
+  height: 10%;
+  max-height: 2%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  border-radius: 25px;
+  box-shadow: 0px 3px 10px 3px rgba(0, 0, 0, 0.5), 0px 0px 5px 1px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.progress-bar.hide {
+  visibility: hidden;
+  transition: visibility 0.3s;
+}
+
+.update-bar {
+  background-color: rgba(255, 255, 255, 0.9);
+  width: 0%;
+  height: 100%;
+  border-radius: 25px;
+  float: left;
+  transition: width 0.3s;
+}
+
+h1 {
+  font-family: "citizen", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  text-align: left;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  color: #f9a21e;
+}
+
+h2 {
+  font-family: "citizen", sans-serif;
+  font-weight: 300;
+  font-style: normal; 
+  text-align: left;
+  color: #f9a21e;
+}
+
+h3 {
+  font-family: "citizen", sans-serif;
+  font-size: large;
+  font-weight: 700; 
+  text-align: left;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  color: #f9a21e;
+}
+
+h6 {
+  font-family: "citizen", sans-serif;
+  font-size: x-small;
+  font-weight: 300;
+  font-style: normal;
+  text-align: left;
+  color: #f9a21e;
+}
+
+p {
+  font-family: "citizen", sans-serif;
+  font-size: small;
+  font-weight: 300;
+  font-style: normal;
+  text-align: left;
+  color: #f9a21e;
+}
+
+a {
+  color: #f9a21e
+} 
+
+.bold {
+  font-weight: bold;
+}
+
+.light {
+  font-weight: lighter;
+}
+
+img {
+  padding-top: 40px;
+  padding-bottom: 30px;
+}
+
+div {
+    margin: 1rem 2rem;
+  }
+
+a {
+    --color:#f9a21e;
+    position: relative;
+    text-decoration: none;
+    color: var(--color);
+    font-family: "citizen", sans-serif;
+    font-style:italic;
+    padding: 0.2rem 0;
+
+  &::before {
+    --line-width: 105%;
+    --line-height: 1px;
+    --line-easing: ease;
+    --line-transition-duration: 300ms;
+
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: var(--line-width);
+    height: var(--line-height);
+    transform-origin: right;
+    transform: scaleX(0);
+    background: var(--color);
+    transition: transform var(--line-transition-duration) var(--line-easing);
+    z-index: 1;
+  }
+
+  &:hover {
+    &::before {
+      transform-origin: left;
+      transform: scaleX(1);
+    }
+      span {
+        --deg: -45deg;
+        &::before {
+          transform: rotate(var(--deg));
+        }
+        &::after {
+          transform: translateX(-1px) rotate(var(--deg));
+        }
+      }
+    }
+
+    span {
+      --line-arrow-width: 1px;
+      --line-arrow-height: 6px;
+      --line-arrow-easing: cubic-bezier(0.3, 1.5, 0.5, 1);
+      --line-arrow-transition-duration: 200ms;
+      --line-arrow-transition-delay: 240ms;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        right: -5%;
+        bottom: 0px;
+        background: var(--color);
+        transition: transform var(--line-arrow-transition-duration)
+          var(--line-arrow-easing);
+        transition-delay: var(--line-arrow-transition-delay);
+        z-index: 2;
+      }
+
+      &::before {
+        width: var(--line-arrow-width);
+        height: var(--line-arrow-height);
+        transform-origin: 0% 100%;
+        transform: rotate(-90deg);
+      }
+
+      &::after {
+        height: var(--line-arrow-width);
+        width: var(--line-arrow-height);
+        transform-origin: 100% 0%;
+        transform: translateX(-1px) rotate(0deg);
+        }
+    }
+    .support{
+      position: absolute;
+      right: 10px;
+      bottom: 10px;
+      padding: 10px;
+      display: flex;
+    }
+  
+    a {
+      margin: 0 10px;
+      color: #ffffff;
+      font-size: 1.8rem;
+      backface-visibility: hidden;
+      transition: all 150ms ease;
+      &:hover{
+        transform: scale3d(1.1);
+      }
+    }
+}
+
