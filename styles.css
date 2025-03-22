@@ -58,16 +58,17 @@ model-viewer {
 }
 
 .carousel {
-  align-content: center;
+  padding: 0px;
 }
 
 h1 {
   font-family: "citizen", sans-serif;
   font-weight: 700;
+  font-size: 2rem;
   font-style: normal;
   text-align: center;
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 15px;
   color: #f9a21e;
 }
 
@@ -84,14 +85,12 @@ h3 {
   font-size: large;
   font-weight: 700; 
   text-align: center;
-  padding-top: 50px;
-  padding-bottom: 50px;
   color: #f9a21e;
 }
 
 h6 {
   font-family: "citizen", sans-serif;
-  font-size: x-small;
+  font-size: 0.75rem;
   font-weight: 300;
   font-style: normal;
   text-align: center;
@@ -100,16 +99,12 @@ h6 {
 
 p {
   font-family: "citizen", sans-serif;
-  font-size: small;
+  font-size: 1rem;
   font-weight: 300;
   font-style: normal;
   text-align: center;
   color: #f9a21e;
 }
-
-a {
-  color: #f9a21e
-} 
 
 .bold {
   font-weight: bold;
@@ -120,16 +115,16 @@ a {
 }
 
 img {
-  padding-top: 40px;
-  padding-bottom: 30px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 div {
-    margin: 1rem 2rem;
+    margin: 1rem 1rem;
   }
 
 a {
-    --color:#f9a21e;
+    --color:#2f5d66;
     position: relative;
     text-decoration: none;
     color: var(--color);
@@ -145,7 +140,7 @@ a {
 
     content: "";
     position: absolute;
-    center: 0;
+    left: 0;
     bottom: 0;
     width: var(--line-width);
     height: var(--line-height);
