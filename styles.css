@@ -9,7 +9,7 @@ html {
 .container {
   max-width: 1000px;
   margin: auto;
-  align-content: left;
+  align-content: center;
 }
 
 body {
@@ -24,7 +24,7 @@ model-viewer {
   width: 80%;
   height: 70%;
   background-color: #dcf690;
-  align-content: center;
+  padding-left: 10%;
 }
 
 
@@ -34,7 +34,7 @@ model-viewer {
   height: 10%;
   max-height: 2%;
   position: absolute;
-  left: 50%;
+  center: 50%;
   top: 50%;
   transform: translate3d(-50%, -50%, 0);
   border-radius: 25px;
@@ -53,15 +53,19 @@ model-viewer {
   width: 0%;
   height: 100%;
   border-radius: 25px;
-  float: left;
+  float: center;
   transition: width 0.3s;
+}
+
+.carousel {
+  align-content: center;
 }
 
 h1 {
   font-family: "citizen", sans-serif;
   font-weight: 700;
   font-style: normal;
-  text-align: left;
+  text-align: center;
   padding-top: 30px;
   padding-bottom: 30px;
   color: #f9a21e;
@@ -71,7 +75,7 @@ h2 {
   font-family: "citizen", sans-serif;
   font-weight: 300;
   font-style: normal; 
-  text-align: left;
+  text-align: center;
   color: #f9a21e;
 }
 
@@ -79,7 +83,7 @@ h3 {
   font-family: "citizen", sans-serif;
   font-size: large;
   font-weight: 700; 
-  text-align: left;
+  text-align: center;
   padding-top: 50px;
   padding-bottom: 50px;
   color: #f9a21e;
@@ -90,7 +94,7 @@ h6 {
   font-size: x-small;
   font-weight: 300;
   font-style: normal;
-  text-align: left;
+  text-align: center;
   color: #f9a21e;
 }
 
@@ -99,7 +103,7 @@ p {
   font-size: small;
   font-weight: 300;
   font-style: normal;
-  text-align: left;
+  text-align: center;
   color: #f9a21e;
 }
 
@@ -141,7 +145,7 @@ a {
 
     content: "";
     position: absolute;
-    left: 0;
+    center: 0;
     bottom: 0;
     width: var(--line-width);
     height: var(--line-height);
@@ -154,7 +158,7 @@ a {
 
   &:hover {
     &::before {
-      transform-origin: left;
+      transform-origin: center;
       transform: scaleX(1);
     }
       span {
