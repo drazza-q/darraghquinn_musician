@@ -22,7 +22,7 @@ body {
 }
 
 model-viewer {
-  height: 500px;
+  height: 300px;
   width: 50%;
   margin: auto;
   background-color: #dcf690;
@@ -61,7 +61,7 @@ model-viewer {
 
 .carousel-inner {
   margin: auto;
-  max-width: 90%;
+  max-width: 80%;
   padding-bottom: 40px;
 }
 
