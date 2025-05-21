@@ -27,7 +27,6 @@ body {
   padding-bottom: 30px;
 }
 
-
 h1 {
   font-family: "citizen", sans-serif;
   font-weight: 700;
@@ -93,7 +92,7 @@ p {
 
 .img-fluid {
   display: block;
-  max-width: 70%;
+  max-width: 65%;
   margin: auto ;
 }
 
