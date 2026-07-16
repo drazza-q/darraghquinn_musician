@@ -1,13 +1,28 @@
-// Handles loading the events for <model-viewer>'s slotted progress bar
-const onProgress = (event) => {
-  const progressBar = event.target.querySelector('.progress-bar');
-  const updatingBar = event.target.querySelector('.update-bar');
-  updatingBar.style.width = `${event.detail.totalProgress * 100}%`;
-  if (event.detail.totalProgress === 1) {
-    progressBar.classList.add('hide');
-    event.target.removeEventListener('progress', onProgress);
-  } else {
-    progressBar.classList.remove('hide');
+// Vanilla replacement for Bootstrap's carousel component.
+// Auto-advances through .carousel-item elements inside the given
+// carousel id, crossfading between slides.
+function initCarousel(carouselId, intervalMs = 5000) {
+  const carousel = document.getElementById(carouselId);
+  if (!carousel) return;
+
+  const items = carousel.querySelectorAll('.carousel-item');
+  if (items.length < 2) return;
+
+  let index = Array.prototype.findIndex.call(items, (item) =>
+    item.classList.contains('active')
+  );
+  if (index === -1) {
+    index = 0;
+    items[0].classList.add('active');
   }
-};
-document.querySelector('model-viewer').addEventListener('progress', onProgress);
+
+  setInterval(() => {
+    items[index].classList.remove('active');
+    index = (index + 1) % items.length;
+    items[index].classList.add('active');
+  }, intervalMs);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  initCarousel('carouselExampleControls');
+});
