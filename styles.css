@@ -2,13 +2,45 @@
   display: none;
 }
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 html {
   height: 100%;
 }
 
+/* ---------- layout (replaces Bootstrap grid) ---------- */
+
 .container {
   max-width: 900px;
-  margin: auto;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+.col-4,
+.col-8 {
+  width: 100%;
+  padding: 0 15px;
+}
+
+/* mirrors Bootstrap's col-md-* behavior: side-by-side from 768px up */
+@media (min-width: 768px) {
+  .col-4 {
+    flex: 0 0 33.3333%;
+    max-width: 33.3333%;
+  }
+
+  .col-8 {
+    flex: 0 0 66.6667%;
+    max-width: 66.6667%;
+  }
 }
 
 body {
@@ -17,15 +49,42 @@ body {
   width: 90%;
   height: 90%;
   background-color: #F4F5F7;
-  
 }
 
-.carousel-inner {
-  margin: auto;
-  max-width: 100%;
+/* ---------- carousel (replaces Bootstrap carousel) ---------- */
+
+.carousel {
   padding-top: 30px;
   padding-bottom: 30px;
 }
+
+.carousel-inner {
+  display: grid;
+  margin: auto;
+  max-width: 100%;
+}
+
+.carousel-item {
+  grid-area: 1 / 1;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.8s ease;
+}
+
+.carousel-item.active {
+  opacity: 1;
+  visibility: visible;
+  position: relative;
+  z-index: 1;
+}
+
+.carousel-item img {
+  display: block;
+  width: 100%;
+}
+
+/* ---------- typography ---------- */
 
 h1 {
   font-family: "citizen", sans-serif;
@@ -40,7 +99,7 @@ h1 {
 h2 {
   font-family: "citizen", sans-serif;
   font-weight: 700;
-  font-style: normal; 
+  font-style: normal;
   text-align: center;
   color: #2f5d66;
 }
@@ -48,7 +107,7 @@ h2 {
 h3 {
   font-family: "citizen", sans-serif;
   font-size: 1.2rem;
-  font-weight: 700; 
+  font-weight: 700;
   font-style: normal;
   text-align: center;
   padding-top: 10px;
@@ -57,7 +116,7 @@ h3 {
 
 h4 {
   font-family: "citizen", sans-serif;
-  font-weight: 700; 
+  font-weight: 700;
   font-style: normal;
   text-align: center;
   padding-top: 10px;
@@ -93,7 +152,7 @@ p {
 .img-fluid {
   display: block;
   max-width: 65%;
-  margin: auto ;
+  margin: auto;
 }
 
 a.normal {
@@ -186,7 +245,7 @@ a.arrow {
       padding: 10px;
       display: flex;
     }
-  
+
     a {
       margin: 0 10px;
       color: #ffffff;
@@ -198,4 +257,3 @@ a.arrow {
       }
     }
 }
-
