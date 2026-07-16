@@ -19,9 +19,10 @@ html {
 }
 
 .row {
-  display: flex;
+  display: block;
   flex-wrap: wrap;
   margin: 0 -15px;
+  text-align: center;
 }
 
 .col-4,
