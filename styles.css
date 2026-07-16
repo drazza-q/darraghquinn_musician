@@ -7,65 +7,25 @@ html {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 900px;
   margin: auto;
-  align-content: left;
 }
 
 body {
-  margin: 0;
+  margin: auto;
   padding: 15px;
-  width: 100%;
-  height: 100%;
+  width: 90%;
+  height: 90%;
   background-color: #F4F5F7;
   
-}
-
-model-viewer {
-  height: 300px;
-  width: 50%;
-  margin: auto;
-  background-color: #dcf690;
-  padding-bottom: 20px;
-}
-
-
-.progress-bar {
-  display: block;
-  width: 33%;
-  height: 10%;
-  max-height: 2%;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate3d(-50%, -50%, 0);
-  border-radius: 25px;
-  box-shadow: 0px 3px 10px 3px rgba(0, 0, 0, 0.5), 0px 0px 5px 1px rgba(0, 0, 0, 0.6);
-  border: 1px solid rgba(255, 255, 255, 0.9);
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.progress-bar.hide {
-  visibility: hidden;
-  transition: visibility 0.3s;
-}
-
-.update-bar {
-  background-color: rgba(255, 255, 255, 0.9);
-  width: 0%;
-  height: 100%;
-  border-radius: 25px;
-  float: center;
-  transition: width 0.3s;
 }
 
 .carousel-inner {
   margin: auto;
   max-width: 100%;
-  padding-top: 15px;
-  padding-bottom: 40px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
-
 
 h1 {
   font-family: "citizen", sans-serif;
@@ -73,7 +33,6 @@ h1 {
   font-size: 2.5rem;
   font-style: normal;
   text-align: left;
-  padding-top: 10px;
   padding-bottom: 15px;
   color: #2f5d66;
 }
@@ -91,9 +50,17 @@ h3 {
   font-size: 1.2rem;
   font-weight: 700; 
   font-style: normal;
-  text-align: left;
+  text-align: center;
   padding-top: 10px;
-  padding-bottom: 0px;
+  color: #2f5d66;
+}
+
+h4 {
+  font-family: "citizen", sans-serif;
+  font-weight: 700; 
+  font-style: normal;
+  text-align: center;
+  padding-top: 10px;
   color: #2f5d66;
 }
 
@@ -124,16 +91,10 @@ p {
 }
 
 .img-fluid {
-  display:block;
-  padding-top: 15px;
-  max-width: 80%;
-  margin: auto;
+  display: block;
+  max-width: 65%;
+  margin: auto ;
 }
-
-/* div {
-    margin: 1rem 1rem;
-  }
-*/
 
 a.normal {
   color: #f9a21e;
