@@ -86,7 +86,10 @@ body {
 }
 
 .iframe {
-  display:block;
+  display: flex;
+  min-height: auto;
+  height: 100%;
+  width: 100%;
 }
 
 /* ---------- typography ---------- */
