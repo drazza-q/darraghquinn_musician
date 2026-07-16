@@ -124,6 +124,15 @@ h4 {
   color: #2f5d66;
 }
 
+h5 {
+  font-family: "citizen", sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  font-style: normal;
+  text-align: center;
+  color: #2f5d66;
+}
+
 h6 {
   font-family: "citizen", sans-serif;
   font-size: 0.75rem;
