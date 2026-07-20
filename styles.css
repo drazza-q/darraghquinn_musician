@@ -8,6 +8,7 @@
 
 html {
   height: 100%;
+  overflow-x: hidden;
 }
 
 /* ---------- layout (replaces Bootstrap grid) ---------- */
@@ -26,9 +27,35 @@ html {
 }
 
 .col-4,
-.col-8 {
+.col-8,
+.col-12 {
   width: 100%;
   padding: 0 15px;
+}
+
+/* breaks an element out of the centered, max-width .container
+   so it spans the full viewport edge-to-edge */
+.full-bleed {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  padding: 0;
+}
+
+/* breaks a row out of the centered, max-width .container so it spans
+   the full browser viewport edge-to-edge */
+.row.full-bleed {
+  width: 100vw;
+  max-width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+}
+
+.row.full-bleed > .col-12 {
+  padding: 0;
 }
 
 /* mirrors Bootstrap's col-md-* behavior: side-by-side from 768px up */
@@ -52,10 +79,11 @@ body {
   background-color: #F4F5F7;
 }
 
+
 /* ---------- carousel (replaces Bootstrap carousel) ---------- */
 
 .carousel {
-  padding-top: 30px;
+  padding-top: 15px;
   padding-bottom: 30px;
 }
 
@@ -86,10 +114,11 @@ body {
 }
 
 .iframe {
-  display: flex;
-  min-height: auto;
-  height: 100%;
+  display: block;
   width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  border: 0;
 }
 
 /* ---------- typography ---------- */
@@ -100,7 +129,7 @@ h1 {
   font-size: 2.5rem;
   font-style: normal;
   text-align: left;
-  padding-bottom: 15px;
+  padding-bottom: 5px;
   color: #2f5d66;
 }
 
@@ -145,7 +174,7 @@ h6 {
   font-size: 0.75rem;
   font-weight: 300;
   font-style: normal;
-  text-align: left;
+  text-align: center;
   color: #2f5d66;
 }
 
@@ -154,7 +183,7 @@ p {
   font-size: 1rem;
   font-weight: 300;
   font-style: normal;
-  text-align: left;
+  text-align: center;
   color: #2f5d66;
 }
 
