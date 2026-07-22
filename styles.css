@@ -196,6 +196,7 @@ p {
 .img-fluid {
   display: block;
   max-width: 80%;
+  max-height: 80vh;
   margin: auto;
 }
 
